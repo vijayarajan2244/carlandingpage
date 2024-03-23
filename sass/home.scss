@@ -122,9 +122,15 @@
     }
     .swiper-button-next{
         right: -15px;
+        @media screen and (max-width:576px) {
+            right: 25px;
+        }
     }
     .swiper-button-prev{
         left: -15px;
+        @media screen and (max-width:576px) {
+            left: 25px;
+        }
     }
 }
 
