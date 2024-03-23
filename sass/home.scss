@@ -2,48 +2,58 @@
 
 
 //Navbar
-.site-logo{
-    @include w-h(150px,60px);
+.site-logo {
+    @include w-h(150px, 60px);
 }
-.custom-nav{
+
+.custom-nav {
     background-color: $white !important;
-    .nav-link{
+
+    .nav-link {
         color: $theme-txt !important;
         font-weight: 500;
         padding: 8px 0 !important;
         width: max-content;
     }
-    .nav-item.active{
-        .nav-link{
+
+    .nav-item.active {
+        .nav-link {
             border-bottom: 2px solid $theme-txt;
         }
     }
-    .nav-item{
-        &:hover{
-            .nav-link{
+
+    .nav-item {
+        &:hover {
+            .nav-link {
                 border-bottom: 2px solid $theme-txt;
             }
         }
     }
-    .input-group{
+
+    .input-group {
         border: 1px solid transparent;
         border-radius: 50px;
         background-color: $input-bg;
-        i{
+
+        i {
             color: $theme-txt;
         }
-        .form-control{
+
+        .form-control {
             height: 40px;
         }
     }
+
     .input-group-text,
-    .form-control{
+    .form-control {
         border: unset;
         background-color: unset;
     }
-    .form-control{
+
+    .form-control {
         color: $theme-txt;
-        &::placeholder{
+
+        &::placeholder {
             font-weight: 500;
             color: $theme-txt;
             padding-right: 15px;
@@ -52,87 +62,111 @@
 }
 
 //Banner
-.banner-background{
+.banner-background {
     background: url("https://wallpaperaccess.com/full/11207.jpg") no-repeat center;
     background-size: cover;
     @include w-h(100%, max-content);
     position: relative;
-    p{
+
+    p {
         color: $white;
     }
-    &::before{
+
+    &::before {
         content: '';
         position: absolute;
         top: 0;
         left: 0;
-        @include w-h(100%,100%);
+        @include w-h(100%, 100%);
         background-color: #00000082;
     }
-    .product-main{
-        .product-img{
-            @include w-h(170px,170px);
-           margin: 0px auto 10px auto;
-            img{
+
+    .product-main {
+        .product-img {
+            @include w-h(170px, 170px);
+            margin: 0px auto 10px auto;
+
+            img {
                 border: 10px solid $white;
                 border-radius: 100px;
             }
         }
     }
-    .bannerSwiper{
+
+    .bannerSwiper {
         height: 300px;
         display: flex;
         align-items: center;
-        .swiper-button-next,
-        .swiper-button-prev{
-            top: 44%;
-            &::after{
-                border-radius: 50px;
-                font-size: 20px;
-                min-width: 40px;
-                height: 40px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-weight: bold;
-                background-color: $white;
-                color: $theme-txt;
-            }
+    }
+
+    .swiper-wrapper {
+        height: max-content;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        top: 44%;
+
+        &::after {
+            border-radius: 50px;
+            font-size: 20px;
+            min-width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            background-color: $white;
+            color: $theme-txt;
         }
     }
-    .swiper-wrapper{
-        height: max-content;
+    .swiper-button-next{
+        right: -15px;
+    }
+    .swiper-button-prev{
+        left: -15px;
     }
 }
 
 //Features
-.border-bottom{
+.border-bottom {
     border-bottom: 2px solid $border-brown !important;
     width: max-content;
 }
-.feature-img{
+
+.feature-img {
     @include w-h(100%, 280px);
-    img{
+
+    img {
         border-radius: 5px;
     }
 }
-.icon-content{
-    i,p{
+
+.icon-content {
+
+    i,
+    p {
         color: $border-brown;
     }
-    i{
+
+    i {
         font-size: 17px;
     }
 }
-.box-car{
+
+.box-car {
     border: 1px solid lighten($color: $border-brown, $amount: 20);
     padding: 30px;
     border-radius: 15px;
-    p{
+
+    p {
         @include line-clamp(3);
     }
-    .box-img{
+
+    .box-img {
         @include w-h(100%, 200px);
-        img{
+
+        img {
             border-radius: 5px;
         }
     }
@@ -140,53 +174,62 @@
 
 
 //Aside
-.brown-bg{
+.brown-bg {
     background-color: $side-bg;
     border-radius: 5px;
-    .border-bottom{
+
+    .border-bottom {
         border-bottom-color: $txt-brown !important;
     }
-    .side-wrapper{
+
+    .side-wrapper {
         padding: 25px;
     }
-    .recent-product{
-        @include w-h(130px,130px);
+
+    .recent-product {
+        @include w-h(130px, 130px);
         margin: auto;
-        img{
+
+        img {
             border-radius: 100px;
         }
     }
 }
 
 //Follow
-.follow-bg{
+.follow-bg {
     background-color: $theme-txt;
     color: $white;
     border-radius: 0 0 5px 5px;
-    .border-bottom{
+
+    .border-bottom {
         border-color: $white !important;
     }
-    ul{
-        li{
+
+    ul {
+        li {
             transition: 0.3s all;
-            a{
+
+            a {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                @include w-h(50px,50px);
+                @include w-h(50px, 50px);
                 border-radius: 50px;
                 background-color: $white;
                 text-decoration: none;
-                i{
+
+                i {
                     color: $theme-txt;
                     font-size: 25px;
                 }
             }
-            &:hover{
+
+            &:hover {
                 transition: 0.3s all;
                 transform: translateY(-7px);
             }
-            
+
         }
     }
 }
