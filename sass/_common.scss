@@ -101,7 +101,7 @@ hr{
     }
 }
 .btn-signup{
-    background-color: lighten($color: $theme-txt, $amount: 20);
+    background: linear-gradient(180deg, rgba(255,98,130,1) 0%, rgba(255,32,78,1) 100%);
     color: $white;
     padding: 11px 20px;
     &:hover{
