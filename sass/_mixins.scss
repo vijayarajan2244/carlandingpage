@@ -1,0 +1,10 @@
+@mixin w-h($width, $height){
+    width: $width;
+    height: $height;
+}
+@mixin line-clamp($line){
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}

@@ -1,0 +1,115 @@
+@import './mixins';
+@import './variables';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//Font Size BEGIN
+.fs-14{
+    font-size:clamp(0.7rem,0.9vw,1rem)!important
+}
+.fs-16{
+    font-size:clamp(0.8rem,1vw,1.1rem)!important
+}
+.fs-18{
+    font-size:clamp(1rem,1.25vw,1.25rem)!important
+}
+.fs-20{
+    font-size:clamp(1.1rem,1.3vw,1.3rem)!important
+}
+.fs-25{
+    font-size:clamp(1.4rem,1.6vw,1.7rem)!important
+}
+.fs-30{
+    font-size:clamp(1.5rem,2vw,1.9rem)!important
+}
+.fs-35{
+    font-size:clamp(1.5rem,2.5vw,2.2rem)!important
+}
+.fs-40{
+    font-size:clamp(1.6rem,2.6vw,2.7rem)!important
+}
+.fs-45{
+    font-size: clamp(1.7rem,3.2vw,3.5rem) !important;
+}
+//Font Size END
+
+//Common Styling BEGIN
+.txt-theme{
+    color: $theme-txt !important;
+}
+.txt-grey{
+    color: $para-grey !important;
+}
+.txt-brown{
+    color: $txt-brown !important;
+}
+ul{
+    padding-left: unset;
+    margin-bottom: unset;
+    list-style-type: none;
+}
+.img-contain{
+    img{
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain;
+    }
+}
+.img-cover{
+    img{
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover;
+    }
+}
+.form-control,.btn,
+.navbar-toggler{
+    &:focus{
+        box-shadow: unset;
+    }
+}
+.form-control{
+    background-color: #f1e4de;
+    height: 50px;
+    padding-left: 20px;
+    &::placeholder{
+        font-size: 15px;
+        color: $txt-brown;
+        font-weight: 500;
+    }
+}
+hr{
+    opacity: 1 !important;
+    border-top: 2px solid lighten($color: $border-brown, $amount: 30);
+    margin: 35px 0;
+}
+.btn-read-more{
+    background-color: lighten($color: $border-brown, $amount: 20);
+    color: $white;
+    padding: 7px 20px;
+    &:hover{
+        background-color: $border-brown;
+        border-color: $border-brown !important;
+        color: $white;
+    }
+    &:active{
+        color: $border-brown !important;
+    }
+}
+.btn-signup{
+    background-color: lighten($color: $theme-txt, $amount: 20);
+    color: $white;
+    padding: 11px 20px;
+    &:hover{
+        background-color: $theme-txt;
+        border-color: $theme-txt !important;
+        color: $white;
+    }
+    &:active{
+        color: $theme-txt !important;
+    }
+}
