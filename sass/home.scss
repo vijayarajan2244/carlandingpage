@@ -133,6 +133,11 @@
     border-bottom: 2px solid $border-brown !important;
     width: max-content;
 }
+.feature-main{
+    p{
+        @include line-clamp(5);
+    }
+}
 
 .feature-img {
     @include w-h(100%, 280px);
